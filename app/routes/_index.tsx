@@ -7,7 +7,7 @@ const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export const loader: LoaderFunction = async ({ context, params }) => {
   const { env, cf, ctx } = context.cloudflare;
-   await delay(10000); // Wait for 20 seconds
+   await delay(20000); // Wait for 20 seconds
 
   return json({ message: "Hello after 20 seconds!" });
 };
